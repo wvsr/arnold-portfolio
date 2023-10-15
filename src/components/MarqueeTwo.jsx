@@ -8,7 +8,7 @@ function MarqueeOne() {
           .map((e, i) => (
             <div key={i} className='flex gap-2 py-9 items-center'>
               <p className='text-2xl md:text-4xl font-semibold'>
-                ¿Quieres una asesoría?
+                ¿Tienes alguna consulta?
               </p>
               <button className='bg-white text-[#220F80] font-bold px-4 py-4 text-lg rounded-full'>
                 ¡Conversemos!
