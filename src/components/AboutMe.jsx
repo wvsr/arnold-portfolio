@@ -42,7 +42,7 @@ function Certification() {
           return (
             <div
               key={i}
-              className='p-2 border border-gray-200 rounded-md shadow-sm w-full'
+              className='p-2 border border-gray-200 dark:border-gray-500 rounded-md shadow-sm w-full'
             >
               <a
                 href={e.credential}
@@ -50,8 +50,12 @@ function Certification() {
                 target='_blank'
                 rel='noreferrer'
               >
-                <p className='text-[15px] text-gray-800'>{e.name}</p>
-                <p className='text-sm text-gray-400'>{e.date}</p>
+                <p className='text-[15px] text-gray-800 dark:text-gray-300'>
+                  {e.name}
+                </p>
+                <p className='text-sm text-gray-400 dark:text-gray-400 mt-3'>
+                  {e.date}
+                </p>
               </a>
             </div>
           )
@@ -69,12 +73,14 @@ function Recognition() {
           return (
             <a
               href={e.link}
-              className='block border border-gray-200 p-4 rounded-xl shadow'
+              className='block border border-gray-200 dark:border-gray-500 p-4 rounded-xl shadow'
               key={i}
             >
               <div>
                 <p className='text-xl mb-3 font-semibold'>{e.title}</p>
-                <p className='text-sm text-gray-600'>{e.desc}</p>
+                <p className='text-sm text-gray-600 dark:text-gray-400'>
+                  {e.desc}
+                </p>
               </div>
             </a>
           )
@@ -100,27 +106,30 @@ export default function AboutMe() {
       <div className='py-6'>
         <div className='flex gap-3 md:gap-5 '>
           <button
-            className={`text-base md:text-xl font-semibold border-spacing-5 text-[#5E6488] ${
-              currentTab === 0 &&
-              'border-b-[4px] border-[#220F80] text-[#220F80]'
+            className={`text-base md:text-xl font-semibold  ${
+              currentTab === 0
+                ? 'border-b-[4px] border-[#220F80] text-[#220F80] dark:border-[#765ef1] dark:text-gray-200'
+                : 'text-[#5E6488] dark:text-gray-400'
             }`}
             onClick={() => setCurrentTab(0)}
           >
             Resumen
           </button>
           <button
-            className={`text-base md:text-xl font-semibold text-[#5E6488] ${
-              currentTab === 1 &&
-              'border-b-[4px] border-[#220F80] text-[#220F80]'
+            className={`text-base md:text-xl font-semibold  ${
+              currentTab === 1
+                ? 'border-b-[4px] border-[#220F80] text-[#220F80] dark:border-[#765ef1] dark:text-gray-200'
+                : 'text-[#5E6488] dark:text-gray-400'
             }`}
             onClick={() => setCurrentTab(1)}
           >
             Certificaciones
           </button>
           <button
-            className={`text-base md:text-xl font-semibold text-[#5E6488] ${
-              currentTab === 2 &&
-              'border-b-[4px] border-[#220F80] text-[#220F80]'
+            className={`text-base md:text-xl font-semibold  ${
+              currentTab === 2
+                ? 'border-b-[4px] border-[#220F80] text-[#220F80] dark:border-[#765ef1] dark:text-gray-200'
+                : 'text-[#5E6488] dark:text-gray-400'
             }`}
             onClick={() => setCurrentTab(2)}
           >

@@ -38,17 +38,19 @@ function Services() {
               return (
                 <div
                   key={i}
-                  className='w-4/6 md:w-full bg-white rounded-3xl text-gray-800 px-3 pt-2 pb-4 shrink-0 md:shrink'
+                  className='w-4/6 md:w-full bg-white rounded-3xl text-gray-800 px-3 pt-2 pb-4 shrink-0 md:shrink dark:bg-neutral'
                 >
                   <img
                     src={service.img}
                     alt=''
                     className='w-full h-auto mt-1 mb-3'
                   />
-                  <h2 className='text-xl md:text-2xl font-bold my-4'>
+                  <h2 className='text-xl md:text-2xl font-bold my-4 dark:text-gray-300'>
                     {service.title}
                   </h2>
-                  <p className='text-[#0A0A0A] leading-[1.2]'>{service.text}</p>
+                  <p className='text-[#0A0A0A] leading-[1.2] dark:text-gray-400'>
+                    {service.text}
+                  </p>
                 </div>
               )
             })}

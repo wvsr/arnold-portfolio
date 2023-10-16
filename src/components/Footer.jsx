@@ -26,7 +26,7 @@ function Footer() {
           <h2 className='text-white text-4xl font-semibold'>
             ¿Tienes alguna consultas?
           </h2>
-          <button className='px-5 py-3 rounded-full bg-white text-xl flex items-center gap-2 w-full justify-center mt-12 md:mt-0 md:w-auto text-center'>
+          <button className='px-5 py-3 rounded-full bg-white dark:text-black text-xl flex items-center gap-2 w-full justify-center mt-12 md:mt-0 md:w-auto text-center'>
             Conversemos <IoLogoWhatsapp />
           </button>
         </div>

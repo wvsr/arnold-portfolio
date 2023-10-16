@@ -9,19 +9,21 @@ import logo7 from './../assets/company/logo7.png'
 
 function Companies() {
   return (
-    <div className='max-w-6xl mx-auto px-4 py-14'>
-      <h2 className='text-2xl md:text-4xl text-center font-semibold'>
-        <span className='text-[#694DF9]'>Experiencia </span>
-        profesional con destacadas empresas
-      </h2>
-      <div className='flex flex-wrap mt-14 justify-center gap-6'>
-        <img src={logo1} />
-        <img src={logo2} />
-        <img src={logo3} />
-        <img src={logo4} />
-        <img src={logo5} />
-        <img src={logo6} />
-        <img src={logo7} />
+    <div className='dark:bg-slate-50'>
+      <div className='max-w-6xl mx-auto px-4 py-14 dark:bg-slate-50'>
+        <h2 className='text-2xl md:text-4xl text-center font-semibold dark:text-gray-800'>
+          <span className='text-[#694DF9]'>Experiencia </span>
+          profesional con destacadas empresas
+        </h2>
+        <div className='flex flex-wrap mt-14 justify-center gap-6'>
+          <img src={logo1} />
+          <img src={logo2} />
+          <img src={logo3} />
+          <img src={logo4} />
+          <img src={logo5} />
+          <img src={logo6} />
+          <img src={logo7} />
+        </div>
       </div>
     </div>
   )

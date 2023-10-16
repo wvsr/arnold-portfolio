@@ -11,12 +11,15 @@ function Hero() {
     >
       <div className='flex items-center order-2 md:order-1'>
         <article className='block'>
-          <p className='text-2xl text-[#757575]'>¡Hola!</p>
+          <p className='text-2xl text-[#757575] dark:text-gray-200'>¡Hola!</p>
           <h1 className='text-3xl md:text-5xl font-bold leading-[1.1] mt-3'>
-            <span className='text-[#5E47D2]'>Soy Arnold,</span>
-            <br /> Software Engineer
+            <span className='text-[#5E47D2] dark:text-[#72a5fc]'>
+              Soy Arnold,
+            </span>
+            <br />
+            <span className='mt-2 block'>Software Engineer</span>
           </h1>
-          <p className='text-[#424242] mt-5'>
+          <p className='text-[#424242] dark:text-gray-300 mt-5'>
             Cuento con experiencia en la optimización de soluciones en la nube,
             construyendo desde el Análisis de Negocios hasta soluciones
             digitales integrales entre datos y backend. Diseño soluciones
@@ -26,13 +29,13 @@ function Hero() {
             ¡Conversemos!
           </button>
           <div className='flex gap-7 my-3 justify-center md:justify-start w-full'>
-            <div className='flex gap-2 text-[#0A0A0A] items-center text-lg'>
+            <div className='flex gap-2 text-[#0A0A0A] dark:text-slate-100 items-center text-lg'>
               <AiFillGithub />
               <a href='#' className='hover:underline'>
                 Github
               </a>
             </div>
-            <div className='flex gap-2 text-[#0A0A0A] items-center text-lg'>
+            <div className='flex gap-2 text-[#0A0A0A] dark:text-slate-100 items-center text-lg'>
               <AiFillLinkedin />
               <a href='#' className='hover:underline'>
                 Linkedin
