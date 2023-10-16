@@ -37,12 +37,12 @@ function Resume() {
 function Certification() {
   return (
     <>
-      <div className='p-4 space-y-3 w-full grid grid-cols-2 gap-2 max-w-md'>
+      <div className='p-4 w-full grid grid-cols-2 gap-2 max-w-md'>
         {certification.map((e, i) => {
           return (
             <div
               key={i}
-              className='p-2 border border-gray-200 dark:border-gray-500 rounded-md shadow-sm w-full'
+              className='p-2 border border-gray-200 dark:border-gray-500 rounded-md shadow-sm w-full h-full'
             >
               <a
                 href={e.credential}
@@ -136,7 +136,7 @@ export default function AboutMe() {
             Reconocimientos
           </button>
         </div>
-        <div className='flex items-end h-full pt-0 pb-6 md:pb-12 w-full'>
+        <div className='flex items-start mt-10 h-full pt-0 pb-6 md:pb-12 w-full'>
           {currentTab === 0 && <Resume />}
           {currentTab === 1 && <Certification />}
           {currentTab === 2 && <Recognition />}

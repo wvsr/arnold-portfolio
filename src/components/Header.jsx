@@ -56,8 +56,8 @@ function LanguageDropDown() {
         Esp <BsChevronDown className='w-4 h-auto ml-3' />
       </button>
 
-      <div className='absolute right-0 mt-0 py-4'>
-        <div className='space-y-2 bg-white border dark:bg-neutral border-gray-200 dark:border-gray-600 rounded-xl shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto w-[180px] p-3 dark:text-gray-300 flex  gap-y-5 py-5 px-6 flex-col'>
+      <div className='absolute right-0 -top-28 mt-0 py-4 -z-20 group-hover:z-50 group-hover:top-8'>
+        <div className='space-y-2 bg-white border dark:bg-neutral border-gray-200 dark:border-gray-600 rounded-xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto w-[180px] dark:text-gray-300 flex gap-y-1 p-4 flex-col'>
           {languageList.map((e, i) => {
             return (
               <button

@@ -1,7 +1,11 @@
 import Marquee from 'react-fast-marquee'
+import useDarkMode from '../hooks/useDarkMode'
 function MarqueeOne() {
+  const [isDark] = useDarkMode()
   return (
-    <Marquee className='gredient-background'>
+    <Marquee
+      className={`${isDark && 'gredient-background-dark'} gredient-background`}
+    >
       <div className='flex gap-14 md:gap-20 mx-2'>
         {Array(8)
           .fill('')

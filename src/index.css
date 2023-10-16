@@ -36,6 +36,15 @@ body {
   color: #fff;
 }
 
+.gredient-background-dark {
+  background: linear-gradient(
+    264deg,
+    #6b2ebe 0%,
+    #573ea3 41.15%,
+    #1b0a4d 92.09%
+  );
+  color: #fff;
+}
 .no-scrollbar {
 }
 .no-scrollbar::-webkit-scrollbar {

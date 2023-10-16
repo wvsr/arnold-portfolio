@@ -21,7 +21,7 @@ function Services() {
     },
   ]
   return (
-    <section id='service' className='py-12'>
+    <section id='service' className='py-24'>
       <div className='max-w-6xl mx-auto'>
         <div className='flex flex-col items-center md:flex-row md:justify-between px-4'>
           <h2 className='text-3xl font-semibold mb-3 text-white'>
