@@ -25,7 +25,7 @@ function Resume() {
           <button className='btn-primary w-full md:w-auto'>
             Trabajemos juntos
           </button>
-          <button className='btn-secondary w-full md:w-auto'>
+          <button className='btn-secondary w-full md:w-auto hover:bg-slate-200'>
             Descargar CV
           </button>
         </div>
@@ -87,17 +87,13 @@ export default function AboutMe() {
   const [currentTab, setCurrentTab] = useState(0)
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 mx-auto px-4 max-w-7xl pt-14 gap-3'>
-      <div>
+      <div className='h-full'>
         <h2 className='text-3xl font-semibold text-center py-4 md:text-left'>
           Sobre mi
         </h2>
-        <div className='relative'>
+        <div className='flex justify-center mt-5'>
           <img className='hidden md:block' src={Arnold} alt='' />
-          <img
-            className='md:hidden block absolute bottom-0'
-            src={MobileHero}
-            alt=''
-          />
+          <img className='md:hidden block' src={MobileHero} alt='' />
         </div>
       </div>
 
