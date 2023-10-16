@@ -11,7 +11,7 @@ function RecentProjects() {
   const props = useSpring({
     opacity: 1,
     transform: `translateX(0}%)`,
-    from: { opacity: 0, transform: 'translateX(500%)' },
+    from: { opacity: 0, transform: 'translateX(300%)' },
     reset: true,
     onRest: () => {}, // No automatic transition, onRest is empty
   })
