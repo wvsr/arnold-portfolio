@@ -1,5 +1,21 @@
-import RecentProjectImage from './../assets/RecentProject.png'
+import { useState } from 'react'
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
+import { useSpring, animated } from 'react-spring'
+import { projects as projectList } from '../data/projects'
+
 function RecentProjects() {
+  const [currentTab, setCurrentTab] = useState(0)
+  const isNextSlideExist = currentTab < projectList.length - 1
+  const isPrevSlideExist = currentTab > 0
+
+  const props = useSpring({
+    opacity: 1,
+    transform: `translateX(0}%)`,
+    from: { opacity: 0, transform: 'translateX(500%)' },
+    reset: true,
+    onRest: () => {}, // No automatic transition, onRest is empty
+  })
+
   return (
     <section className='px-3 max-w-6xl py-14 mx-auto'>
       <div className='text-center'>
@@ -10,26 +26,50 @@ function RecentProjects() {
           Consulte las implementaciones recientes y los diseños de alto nivel
         </p>
       </div>
-      <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
-        <div>
-          <img src={RecentProjectImage} alt='' />
+      <animated.div style={props}>
+        <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
+          <div>
+            <img src={projectList[currentTab].imageUrl} alt='' />
+          </div>
+          <div className='space-y-4'>
+            <h2 className='text-[27px] md:text-[32px] font-semibold'>
+              {projectList[currentTab].title}
+            </h2>
+            <p>{projectList[currentTab].description}</p>
+            <p className='text-xl text-[#757575]'>
+              Cliente: {projectList[currentTab].client}
+            </p>
+            <button className='btn-primary'>¡Conversemos!</button>
+          </div>
         </div>
-        <div className='space-y-4'>
-          <h2 className='text-[27px] md:text-[32px] font-semibold'>
-            Most Profitable Products of Retail E-Commerce Company{' '}
-          </h2>
-          <p>
-            El líder de TI abordó la creación de una base de datos central por
-            sí mismo, encontrando desafíos debido a la falta de estructura y
-            estrategia. Sin embargo, al colaborar con expertos, se seleccionaron
-            herramientas adecuadas, se estableció un flujo de trabajo completo y
-            se automatizó eficientemente todo el proceso. Como resultado, se
-            logró una arquitectura bien diseñada y una mejora significativa en
-            los informes, lo que permitió identificar con precisión las tiendas
-            y productos de alto rendimiento.
-          </p>
-          <p className='text-xl text-[#757575]'>Cliente: Lorem Ipsum</p>
-          <button className='btn-primary'>¡Conversemos!</button>
+      </animated.div>
+      <div className='flex justify-end'>
+        <div className='flex gap-3'>
+          <button
+            onClick={() =>
+              isPrevSlideExist && setCurrentTab((prev) => prev - 1)
+            }
+            className={`border-2 rounded-full p-3 ${
+              isPrevSlideExist
+                ? 'text-black border-gray-800'
+                : 'text-gray-400 border-gray-400 cursor-not-allowed'
+            }`}
+          >
+            <AiOutlineArrowLeft className='w-5 h-auto' />
+          </button>
+
+          <button
+            className={`border-2 rounded-full p-3 ${
+              isNextSlideExist
+                ? 'text-black border-gray-800'
+                : 'text-gray-400 border-gray-400 cursor-not-allowed'
+            }`}
+            onClick={() =>
+              isNextSlideExist && setCurrentTab((prev) => prev + 1)
+            }
+          >
+            <AiOutlineArrowRight className='w-5 h-auto' />
+          </button>
         </div>
       </div>
     </section>
