@@ -16,7 +16,7 @@ function Technologies() {
           mejor servicio
         </p>
       </div>
-      <div className='flex flex-wrap gap-24 w-full justify-center'>
+      <div className='flex flex-wrap gap-8 md:gap-24 w-full justify-center'>
         <div>
           <img src={gcloud} />
           <p className='text-center font-semibold mt-2'>Google Cloud</p>
